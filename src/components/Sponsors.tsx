@@ -1,9 +1,9 @@
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 
-// Helper function to get asset URL
+// Helper function to get asset URL from public folder
 const getAssetUrl = (path: string) => {
-  return new URL(`../assets/${path}`, import.meta.url).href;
+  return `/assets/${path}`;
 };
 
 export default function Sponsors() {

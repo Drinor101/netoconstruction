@@ -1,7 +1,7 @@
 import { ChevronDown, ArrowRight } from 'lucide-react';
-import heroVideo from '../assets/01.Kompleksi-Parku-Animacion.mp4';
 
 export default function Hero() {
+  const heroVideo = '/assets/01.Kompleksi-Parku-Animacion.mp4';
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);

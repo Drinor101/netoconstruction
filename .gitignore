@@ -30,11 +30,24 @@ dist-ssr
 .env.production.local
 .env.development.local
 
-# Large media files (optional - uncomment if you want to exclude them)
-# *.mp4
-# *.mov
-# *.avi
-# *.pdf
+# Large media files - exclude from git
+*.mp4
+*.mov
+*.avi
+*.pdf
+
+# Exclude public assets folder (large files stored here)
+public/assets/*.mp4
+public/assets/*.pdf
+public/assets/*.mov
+public/assets/*.avi
+
+# Keep small assets in src/assets
+!src/assets/*.png
+!src/assets/*.jpg
+!src/assets/*.jpeg
+!src/assets/*.gif
+!src/assets/*.svg
 
 # OS files
 Thumbs.db

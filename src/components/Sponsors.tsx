@@ -1,44 +1,40 @@
 import Section from './Section';
 import SectionTitle from './SectionTitle';
-
-// Helper function to get asset URL from public folder
-const getAssetUrl = (path: string) => {
-  return `/assets/${path}`;
-};
+import { getCloudinaryPdfUrl } from '../config/cloudinary';
 
 export default function Sponsors() {
   const sponsors = [
     {
       name: 'Alori Reklama',
-      pdf: getAssetUrl('Alori Reklama.pdf'),
+      pdf: getCloudinaryPdfUrl('Alori Reklama.pdf'),
     },
     {
       name: 'AXHUSTATOR ENISI',
-      pdf: getAssetUrl('AXHUSTATOR ENISI.pdf'),
+      pdf: getCloudinaryPdfUrl('AXHUSTATOR ENISI.pdf'),
     },
     {
       name: 'E-BAAU',
-      pdf: getAssetUrl('E-BAAU.pdf'),
+      pdf: getCloudinaryPdfUrl('E-BAAU.pdf'),
     },
     {
       name: 'ELONI COMMERCE',
-      pdf: getAssetUrl('ELONI COMMERCE.pdf'),
+      pdf: getCloudinaryPdfUrl('ELONI COMMERCE.pdf'),
     },
     {
       name: 'EP GJEOMETRI',
-      pdf: getAssetUrl('EP GJEOMETRI.pdf'),
+      pdf: getCloudinaryPdfUrl('EP GJEOMETRI.pdf'),
     },
     {
       name: 'GAZI LED',
-      pdf: getAssetUrl('GAZI LED.pdf'),
+      pdf: getCloudinaryPdfUrl('GAZI LED.pdf'),
     },
     {
       name: 'RELUX',
-      pdf: getAssetUrl('RELUX.pdf'),
+      pdf: getCloudinaryPdfUrl('RELUX.pdf'),
     },
     {
       name: 'STATIKA',
-      pdf: getAssetUrl('STATIKA.pdf'),
+      pdf: getCloudinaryPdfUrl('STATIKA.pdf'),
     },
   ];
 

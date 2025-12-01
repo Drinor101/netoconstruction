@@ -1,7 +1,8 @@
 import { ChevronDown, ArrowRight } from 'lucide-react';
+import { getCloudinaryVideoUrl } from '../config/cloudinary';
 
 export default function Hero() {
-  const heroVideo = '/assets/01.Kompleksi-Parku-Animacion.mp4';
+  const heroVideo = getCloudinaryVideoUrl('heroVideo');
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);

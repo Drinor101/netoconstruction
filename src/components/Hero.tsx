@@ -1,8 +1,6 @@
 import { ChevronDown, ArrowRight } from 'lucide-react';
-import { getCloudinaryVideoUrl } from '../config/cloudinary';
 
 export default function Hero() {
-  const heroVideo = getCloudinaryVideoUrl('heroVideo');
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -20,16 +18,24 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-105"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <iframe
+          className="absolute"
+          style={{
+            top: '50%',
+            left: '50%',
+            width: '100vw',
+            height: '56.25vw',
+            minHeight: '100%',
+            minWidth: '177.78vh',
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none'
+          }}
+          src="https://www.youtube-nocookie.com/embed/M9T4JkCSN4o?autoplay=1&mute=1&loop=1&playlist=M9T4JkCSN4o&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&enablejsapi=1&origin=https://www.youtube.com"
+          allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
+          allowFullScreen
+          frameBorder="0"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(217,119,6,0.15),transparent_70%)]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.3)_100%)]"></div>

@@ -3,9 +3,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 
-// Helper function to get asset URL
+// Helper function to get optimized asset URL
 const getAssetUrl = (path: string) => {
-  return new URL(`../assets/${path}`, import.meta.url).href;
+  const webpPath = path.replace(/\.(jpg|jpeg)$/i, '.webp');
+  return new URL(`../assets/optimized/${webpPath}`, import.meta.url).href;
 };
 
 export default function Projects() {

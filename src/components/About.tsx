@@ -2,7 +2,7 @@ import { Award, Shield, Users, TrendingUp } from 'lucide-react';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 import Card from './Card';
-import aboutImage from '../assets/NDERTESA ANASH1.jpg';
+import aboutImage from '../assets/optimized/NDERTESA ANASH1.webp';
 
 export default function About() {
   const features = [
